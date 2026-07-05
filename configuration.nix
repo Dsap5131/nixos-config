@@ -64,6 +64,8 @@
   # Enable flakes permanently on the installed system.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nixpkgs.config.allowUnfree = true;
+
   # Set to your install's release number and NEVER chnage it afterward.
   system.stateVersion = "26.05";
 

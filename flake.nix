@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    claude-code.url = "github:sadjow/claude-code-nix";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -12,10 +13,15 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, claude-code, ... }@inputs: {
     nixosConfigurations.fw16 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ({ pkgs, ...}: {
+          nixpkgs.overlays = [ claude-code.overlays.default ];
+          environment.systemPackages = [ pkgs.claude-code ];
+        })
+
         ./configuration.nix
         
         # Framework 16 AI 300 series (iGPU only, no dGPU module yet). 
