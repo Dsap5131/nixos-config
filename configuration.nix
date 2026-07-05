@@ -63,6 +63,7 @@
     firefox
     vim
     slack
+    lazygit
   ];
 
   # Enable flakes permanently on the installed system.
