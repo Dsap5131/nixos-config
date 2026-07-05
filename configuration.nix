@@ -41,12 +41,15 @@
     pulse.enable = true;
   };
 
+  # --- Shell: zsh is the login shell your dotfiles' .zshrc/oh-my-zsh expect ---
+  programs.zsh.enable = true;
+
   # --- Your user ---
   users.users.dsapienza = {
     isNormalUser = true;
     description = "Dylan Sapienza";
     extraGroups = [ "wheel" "networkmanager" ];
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
   };
 
   # --- System-wide packages (the glue an i3 desktop needs on first boot) ---
@@ -59,6 +62,7 @@
     dunst	# notifications
     firefox
     vim
+    slack
   ];
 
   # Enable flakes permanently on the installed system.
