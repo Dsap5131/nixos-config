@@ -66,6 +66,9 @@
     lazygit
   ];
 
+  # other programs
+  services.tailscale.enable = true;
+
   # Enable flakes permanently on the installed system.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
