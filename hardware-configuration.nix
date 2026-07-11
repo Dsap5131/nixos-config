@@ -30,4 +30,17 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # Enable Bluetooth support
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        # Experimental features are often required for advanced BLE features and connections
+        Experimental = true; 
+        ControllerMode = "dual"; # Supports both classic and BLE connections
+      };
+    };
+  };
 }
