@@ -66,6 +66,7 @@
     lazygit
     brightnessctl
     obsidian
+    nodejs
   ];
 
   # other programs
