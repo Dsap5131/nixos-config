@@ -48,7 +48,7 @@
   users.users.dsapienza = {
     isNormalUser = true;
     description = "Dylan Sapienza";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "video"];
     shell = pkgs.zsh;
   };
 
@@ -64,6 +64,7 @@
     vim
     slack
     lazygit
+    brightnessctl
   ];
 
   # other programs
