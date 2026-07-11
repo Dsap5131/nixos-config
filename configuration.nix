@@ -65,6 +65,7 @@
     slack
     lazygit
     brightnessctl
+    obsidian
   ];
 
   # other programs
