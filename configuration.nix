@@ -69,6 +69,18 @@
 
   # other programs
   services.tailscale.enable = true;
+    fileSystems."/home/dsapienza/drive" = {
+      device = "192.168.32.167:/volume1/homes";
+      fsType = "nfs";
+      options = [
+        "nofail"
+        "soft"
+        "timeo=100"
+        "retrans=3"
+        "vers=3"
+        "x-systemd.mount-timeout=10"
+      ];
+    };
 
   # Enable flakes permanently on the installed system.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
