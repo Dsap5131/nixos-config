@@ -13,6 +13,7 @@
   # --- Networking ---
   networking.hostName = "fw16";
   networking.networkmanager.enable = true;
+  programs.nm-applet.enable = true;
 
   # --- Locale / time (adjust to yours) ---
   time.timeZone = "America/New_York";
