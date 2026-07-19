@@ -68,6 +68,8 @@
     brightnessctl
     obsidian
     nodejs
+    rpi-imager
+    glab
   ];
 
   # other programs
