@@ -70,6 +70,7 @@
     nodejs
     rpi-imager
     glab
+    python3
   ];
 
   # other programs
