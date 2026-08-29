@@ -71,6 +71,7 @@
     rpi-imager
     glab
     python3
+    discord
   ];
 
   # other programs
