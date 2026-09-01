@@ -49,7 +49,7 @@
   users.users.dsapienza = {
     isNormalUser = true;
     description = "Dylan Sapienza";
-    extraGroups = [ "wheel" "networkmanager" "video"];
+    extraGroups = [ "wheel" "networkmanager" "video" "docker"];
     shell = pkgs.zsh;
   };
 
@@ -98,6 +98,11 @@
 
   # Set to your install's release number and NEVER chnage it afterward.
   system.stateVersion = "26.05";
-
+  
+  # enable rootless docker
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
 }
 
