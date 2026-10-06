@@ -73,6 +73,7 @@
     python3
     discord
     age
+    rclone
   ];
 
   # other programs
