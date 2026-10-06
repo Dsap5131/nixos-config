@@ -72,6 +72,7 @@
     glab
     python3
     discord
+    age
   ];
 
   # other programs
