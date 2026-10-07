@@ -74,6 +74,7 @@
     discord
     age
     rclone
+    dnsutils
   ];
 
   # other programs
