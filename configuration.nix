@@ -75,6 +75,7 @@
     age
     rclone
     dnsutils
+    steam
   ];
 
   # other programs
