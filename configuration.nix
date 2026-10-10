@@ -76,6 +76,7 @@
     rclone
     dnsutils
     steam
+    volumeicon
   ];
 
   # other programs
