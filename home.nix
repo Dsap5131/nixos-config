@@ -15,6 +15,8 @@ in
     tmux
     ripgrep
     fd
+    flameshot
+    xclip
     # pyright ruff clang-tools	# uncomment the language servers you use
   ];
 
