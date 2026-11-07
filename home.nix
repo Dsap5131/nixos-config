@@ -17,6 +17,7 @@ in
     fd
     flameshot
     xclip
+    sops
     # pyright ruff clang-tools	# uncomment the language servers you use
   ];
 
